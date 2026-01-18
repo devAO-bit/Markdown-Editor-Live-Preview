@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Editor</title>
+    <!-- Ace Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+
+    <!-- Highlight.js for code syntax highlighting -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>📝 Markdown Editor</h1>
+      <div class="header-actions">
+        <button class="btn btn-secondary" onclick="clearEditor()">Clear</button>
+        <button class="btn" onclick="saveMarkdown()">Save</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="editor-panel">
+        <div class="panel-title">Markdown Editor</div>
+        <div id="editor"></div>
+      </div>
+
+      <div class="preview-panel">
+        <div class="panel-title">Live Preview</div>
+        <div id="preview"></div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
