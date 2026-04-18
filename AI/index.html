@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Evolution of AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring loader-ring-2"></div>
+      <div class="loader-logo">AI</div>
+      <div class="loader-text">INITIALIZING NEURAL PATHWAYS</div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="nav-logo-bracket">[</span>AI<span class="nav-logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Origin</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#future">Future</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="soundToggle" class="sound-btn" title="Toggle Sound">
+        <span class="sound-icon">♪</span>
+        <span class="sound-label">SOUND</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Side Timeline Progress -->
+  <div id="sideTimeline">
+    <div class="stl-label" style="top:0%">1950</div>
+    <div class="stl-dot" style="top:0%" data-era="0"></div>
+    <div class="stl-dot" style="top:25%" data-era="1"></div>
+    <div class="stl-dot" style="top:50%" data-era="2"></div>
+    <div class="stl-dot" style="top:75%" data-era="3"></div>
+    <div class="stl-dot" style="top:100%" data-era="4"></div>
+    <div class="stl-label" style="top:100%">2050</div>
+    <div class="stl-track"><div class="stl-fill" id="stlFill"></div></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-eyebrow">NEURAL INTELLIGENCE MUSEUM · EST. 2025</div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">THE</span>
+        <span class="hero-title-line accent">EVOLUTION</span>
+        <span class="hero-title-line">OF AI</span>
+      </h1>
+      <p class="hero-subtitle">From Logic Machines to Super Intelligence</p>
+      <a href="#timeline" class="hero-cta">
+        <span class="cta-text">ENTER FUTURE</span>
+        <span class="cta-ring"></span>
+        <span class="cta-ring cta-ring-2"></span>
+      </a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- Timeline Scroll Story -->
+  <section id="timeline">
+
+    <!-- Era 1: 1950s -->
+    <div class="era-block" id="era0">
+      <div class="era-canvas-wrap"><canvas class="era-canvas" id="canvas0"></canvas></div>
+      <div class="era-content">
+        <div class="era-year">1950s</div>
+        <div class="era-tag">THE BIRTH OF THINKING MACHINES</div>
+        <h2 class="era-title">Alan Turing &amp;<br/>The Question of Mind</h2>
+        <p class="era-desc">
+          In 1950, mathematician Alan Turing posed a deceptively simple question: <em>"Can machines think?"</em> 
+          His theoretical Turing Test laid the philosophical foundation for an entire civilization's obsession 
+          with artificial minds. The ENIAC, weighing 30 tons, flickered to life with the first digital computations.
+        </p>
+        <div class="era-stats">
+          <div class="stat"><span class="stat-num">1950</span><span class="stat-label">Turing Test Proposed</span></div>
+          <div class="stat"><span class="stat-num">17,468</span><span class="stat-label">Vacuum Tubes in ENIAC</span></div>
+          <div class="stat"><span class="stat-num">5KB/s</span><span class="stat-label">Processing Speed</span></div>
+        </div>
+        <div class="era-quote">"Can machines think?"<span class="quote-attr">— Alan Turing, 1950</span></div>
+      </div>
+    </div>
+
+    <!-- Era 2: 1980s -->
+    <div class="era-block era-right" id="era1">
+      <div class="era-canvas-wrap"><canvas class="era-canvas" id="canvas1"></canvas></div>
+      <div class="era-content">
+        <div class="era-year">1980s</div>
+        <div class="era-tag">THE AGE OF EXPERT SYSTEMS</div>
+        <h2 class="era-title">Silicon Minds &amp;<br/>the Terminal Era</h2>
+        <p class="era-desc">
+          Expert systems encoded human expertise into rule-based machines. MYCIN diagnosed blood infections. 
+          XCON configured computer systems. The green glow of the CRT terminal became a symbol of intelligence 
+          distilled into logic — brittle, rigid, yet strangely powerful.
+        </p>
+        <div class="era-stats">
+          <div class="stat"><span class="stat-num">600+</span><span class="stat-label">Expert Systems Deployed</span></div>
+          <div class="stat"><span class="stat-num">$1B+</span><span class="stat-label">Industry Value by 1985</span></div>
+          <div class="stat"><span class="stat-num">10K</span><span class="stat-label">Rules per System</span></div>
+        </div>
+        <div class="era-terminal">
+          <div class="terminal-header"><span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span></div>
+          <div class="terminal-body" id="termBody">
+            <span class="t-prompt">$ </span><span class="t-cmd" id="termCmd"></span><span class="t-cursor">█</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Era 3: 2012 -->
+    <div class="era-block" id="era2">
+      <div class="era-canvas-wrap"><canvas class="era-canvas" id="canvas2"></canvas></div>
+      <div class="era-content">
+        <div class="era-year">2012</div>
+        <div class="era-tag">THE DEEP LEARNING REVOLUTION</div>
+        <h2 class="era-title">AlexNet &amp; the<br/>Neural Awakening</h2>
+        <p class="era-desc">
+          ImageNet 2012. AlexNet shattered records by 10 percentage points — a margin that rewrote history. 
+          Hinton, LeCun, and Bengio's decades of perseverance culminated in machines that could see, 
+          recognize, and understand. The neural network — once laughed out of conferences — became 
+          the dominant paradigm of intelligence.
+        </p>
+        <div class="era-stats">
+          <div class="stat"><span class="stat-num">85%</span><span class="stat-label">ImageNet Accuracy</span></div>
+          <div class="stat"><span class="stat-num">60M</span><span class="stat-label">Parameters in AlexNet</span></div>
+          <div class="stat"><span class="stat-num">10×</span><span class="stat-label">GPU Speedup</span></div>
+        </div>
+        <div class="neural-viz" id="neuralViz">
+          <div class="nv-layer" id="nvL0"></div>
+          <div class="nv-svg-wrap"><svg id="nvSvg" width="100%" height="100%"></svg></div>
+          <div class="nv-layer" id="nvL1"></div>
+          <div class="nv-svg-wrap2"><svg id="nvSvg2" width="100%" height="100%"></svg></div>
+          <div class="nv-layer" id="nvL2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Era 4: 2022 -->
+    <div class="era-block era-right" id="era3">
+      <div class="era-canvas-wrap"><canvas class="era-canvas" id="canvas3"></canvas></div>
+      <div class="era-content">
+        <div class="era-year">2022</div>
+        <div class="era-tag">THE GENERATIVE EXPLOSION</div>
+        <h2 class="era-title">GPT, DALL·E &amp;<br/>Creative Intelligence</h2>
+        <p class="era-desc">
+          The world changed overnight. ChatGPT reached 100 million users in 60 days — faster than any 
+          technology in history. DALL·E painted masterpieces from words. Copilot wrote code. 
+          Suddenly, the boundary between human creativity and machine output became philosophically blurred.
+        </p>
+        <div class="era-stats">
+          <div class="stat"><span class="stat-num">100M</span><span class="stat-label">Users in 60 Days</span></div>
+          <div class="stat"><span class="stat-num">175B</span><span class="stat-label">GPT-3 Parameters</span></div>
+          <div class="stat"><span class="stat-num">$1T+</span><span class="stat-label">AI Market Value</span></div>
+        </div>
+        <div class="gen-ai-grid" id="genGrid">
+          <div class="gen-card" data-label="Language">GPT</div>
+          <div class="gen-card" data-label="Vision">DALL·E</div>
+          <div class="gen-card" data-label="Code">Copilot</div>
+          <div class="gen-card" data-label="Music">Suno</div>
+          <div class="gen-card" data-label="Video">Sora</div>
+          <div class="gen-card" data-label="Science">AlphaFold</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Era 5: 2050 -->
+    <div class="era-block era-future" id="era4">
+      <div class="era-canvas-wrap"><canvas class="era-canvas" id="canvas4"></canvas></div>
+      <div class="era-content">
+        <div class="era-year">2050</div>
+        <div class="era-tag">THE AGI HORIZON</div>
+        <h2 class="era-title">Human &amp; Machine<br/>In Synthesis</h2>
+        <p class="era-desc">
+          In the neon-lit skylines of tomorrow, humans and AGI systems collaborate as partners. 
+          Neural interfaces dissolve the screen. Holographic companions navigate cities with us. 
+          Intelligence — once locked in silicon — flows freely, ambient and boundless, woven into 
+          the fabric of civilization itself.
+        </p>
+        <div class="era-stats">
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Knowledge Graph Size</span></div>
+          <div class="stat"><span class="stat-num">8B</span><span class="stat-label">Human-AI Partnerships</span></div>
+          <div class="stat"><span class="stat-num">1ms</span><span class="stat-label">Thought-to-Action Latency</span></div>
+        </div>
+        <div class="future-badge">
+          <div class="fb-ring"></div>
+          <div class="fb-ring fb-ring-2"></div>
+          <div class="fb-text">AGI<br/><span>ONLINE</span></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Closing Manifesto -->
+  <section id="future">
+    <canvas id="futureCanvas"></canvas>
+    <div class="future-content">
+      <div class="future-eyebrow">THE QUESTION REMAINS</div>
+      <h2 class="future-heading">What will <em>you</em><br/>build with it?</h2>
+      <p class="future-body">
+        From Turing's dream to trillion-parameter giants, the arc of artificial intelligence bends 
+        toward one inevitable truth — this technology mirrors us. Our curiosity. Our creativity. Our contradictions.
+      </p>
+      <div class="future-cta-row">
+        <a href="#hero" class="future-cta">RETURN TO ORIGIN</a>
+      </div>
+      <div class="future-credits">
+        A cinematic experience · Built with code &amp; vision · 2025
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
